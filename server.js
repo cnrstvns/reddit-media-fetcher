@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 if (DEV) app.use(morgan('dev'));
-app.use('/', require('./routes/index.router'));
+app.use('/', require('./src/routes/index.router'));
 
 app.listen(PORT, () => {
   console.log(`Listening on ${PORT}`);
